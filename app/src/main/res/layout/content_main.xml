@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3D3"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/dollarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:ems="10"
+        android:hint="@string/cad_dollar"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="517dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/output"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/tap_a_button_to_display_the_conversion"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dollarText" />
+
+    <Button
+        android:id="@+id/usd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertUSD"
+        android:text="@string/usd_string"
+        app:layout_constraintBottom_toTopOf="@+id/chf_button"
+        app:layout_constraintEnd_toStartOf="@+id/jpy_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eur_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/eur_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertEUR"
+        android:text="@string/eur"
+        app:layout_constraintBottom_toTopOf="@+id/gbp_button"
+        app:layout_constraintEnd_toStartOf="@+id/usd_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/jpy_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertJPY"
+        android:text="@string/jpy"
+        app:layout_constraintBottom_toTopOf="@+id/cny_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/usd_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/gbp_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertGBP"
+        android:text="@string/gbp"
+        app:layout_constraintBottom_toTopOf="@+id/mxn_button"
+        app:layout_constraintEnd_toStartOf="@+id/chf_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eur_button" />
+
+    <Button
+        android:id="@+id/chf_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertCHF"
+        android:text="@string/chf"
+        app:layout_constraintBottom_toTopOf="@+id/sek_button"
+        app:layout_constraintEnd_toStartOf="@+id/cny_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/gbp_button"
+        app:layout_constraintTop_toBottomOf="@+id/usd_button" />
+
+    <Button
+        android:id="@+id/cny_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertCNY"
+        android:text="@string/cny"
+        app:layout_constraintBottom_toTopOf="@+id/rub_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chf_button"
+        app:layout_constraintTop_toBottomOf="@+id/jpy_button" />
+
+    <Button
+        android:id="@+id/mxn_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertMXN"
+        android:text="@string/mxn"
+        app:layout_constraintBottom_toTopOf="@+id/eqp_button"
+        app:layout_constraintEnd_toStartOf="@+id/sek_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gbp_button" />
+
+    <Button
+        android:id="@+id/sek_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertSEK"
+        android:text="@string/sek"
+        app:layout_constraintBottom_toTopOf="@+id/aud_button"
+        app:layout_constraintEnd_toStartOf="@+id/rub_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mxn_button"
+        app:layout_constraintTop_toBottomOf="@+id/chf_button" />
+
+    <Button
+        android:id="@+id/rub_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertRUB"
+        android:text="@string/rub"
+        app:layout_constraintBottom_toTopOf="@+id/nzd_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sek_button"
+        app:layout_constraintTop_toBottomOf="@+id/cny_button" />
+
+    <Button
+        android:id="@+id/aud_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertAUD"
+        android:text="@string/aud"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/nzd_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eqp_button"
+        app:layout_constraintTop_toBottomOf="@+id/sek_button" />
+
+    <Button
+        android:id="@+id/eqp_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertEGP"
+        android:text="@string/egp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/aud_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mxn_button" />
+
+    <Button
+        android:id="@+id/nzd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#32CD32"
+        android:onClick="convertNZD"
+        android:text="@string/nzd"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aud_button"
+        app:layout_constraintTop_toBottomOf="@+id/rub_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

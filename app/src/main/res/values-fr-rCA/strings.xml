@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Assignment 1</string>
+    <string name="cad_dollar">Entrez le dollar canadien</string>
+    <string name="output">Convertisseur de devise CAD</string>
+    <string name="tap_a_button_to_display_the_conversion">Appuyez sur un bouton pour afficher la conversion</string>
+    <string name="nzd">NZD</string>
+    <string name="rub">RUB</string>
+    <string name="sek">SEK</string>
+    <string name="usd_string">USD</string>
+    <string name="mxn">MXN</string>
+    <string name="jpy">JPY</string>
+    <string name="gbp">GBP</string>
+    <string name="inr">INR</string>
+    <string name="eur">EUR</string>
+    <string name="egp">EGP</string>
+    <string name="cny">CNY</string>
+    <string name="chf">CHF</string>
+    <string name="aud">AUD</string>
+    <string name="action_settings">Paramètres</string>
+</resources>
